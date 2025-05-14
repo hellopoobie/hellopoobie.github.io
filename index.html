@@ -6,47 +6,82 @@
   <title>Typewriter Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --bg: #fefcf9;
+      --text: #1a1a1a;
+      --accent: #444;
+      --border: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Special Elite', monospace;
-      background-color: #fdf6e3;
-      color: #000;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      max-width: 768px;
+      margin: auto;
+      line-height: 1.8;
     }
 
-    h1, h2, h3 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.2em;
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
-    a {
-      color: #2a4d69;
-      text-decoration: underline dotted;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
     }
 
     .blog-post {
       margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #3a3a7c;
+      text-decoration: underline;
     }
 
     audio, iframe {
-      display: block;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      max-width: 100%;
+      width: 100%;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 8px;
     }
 
     .divider {
       text-align: center;
       margin: 3rem 0;
+      color: #aaa;
     }
 
     .divider::before {
       content: '✦ ✦ ✦';
-      color: #888;
+      letter-spacing: 0.5rem;
     }
   </style>
 </head>
@@ -61,7 +96,7 @@
     <p>
       Today I begin this journey. This blog is my space to write freely, like letters to the world, typed with the clack of keys in a quiet room.
     </p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
     <audio controls>
       <source src="example.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
