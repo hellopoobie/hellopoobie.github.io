@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Typewriter Blog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fefcf9;
-      --text: #1a1a1a;
-      --accent: #444;
-      --border: #ddd;
+      --bg: #fffaf5;
+      --text: #3e2c1c;
+      --accent: #85624e;
+      --border: #d8cfc4;
+      --highlight: #e6dcd1;
     }
 
     * {
@@ -20,13 +21,14 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       padding: 2rem;
       max-width: 768px;
       margin: auto;
       line-height: 1.8;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
     }
 
     header {
@@ -35,23 +37,29 @@
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
       margin-bottom: 0.5rem;
       color: var(--accent);
     }
 
     header p {
-      font-size: 1.1rem;
-      color: #666;
+      font-size: 1.2rem;
+      color: #6b4e3d;
+      font-style: italic;
     }
 
     .blog-post {
       margin-bottom: 4rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px dashed var(--border);
+      padding: 2rem;
+      background-color: var(--highlight);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     h2 {
+      font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       margin-bottom: 1rem;
       color: var(--accent);
@@ -62,25 +70,25 @@
     }
 
     a {
-      color: #3a3a7c;
-      text-decoration: underline;
+      color: #6f4f3e;
+      text-decoration: underline dotted;
     }
 
     audio, iframe {
       width: 100%;
       margin: 1rem 0;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     .divider {
       text-align: center;
       margin: 3rem 0;
-      color: #aaa;
+      color: #b59e89;
     }
 
     .divider::before {
-      content: '✦ ✦ ✦';
+      content: '❁ ❁ ❁';
       letter-spacing: 0.5rem;
     }
   </style>
