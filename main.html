@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typewriter Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Special Elite', monospace;
+      background-color: #fdf6e3;
+      color: #000;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+
+    a {
+      color: #2a4d69;
+      text-decoration: underline dotted;
+    }
+
+    .blog-post {
+      margin-bottom: 4rem;
+    }
+
+    audio, iframe {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      max-width: 100%;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .divider::before {
+      content: '✦ ✦ ✦';
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Typewriter Blog</h1>
+    <p>Thoughts, ideas, and letters from the desk of a digital typewriter.</p>
+  </header>
+
+  <div class="blog-post">
+    <h2>First Entry</h2>
+    <p>
+      Today I begin this journey. This blog is my space to write freely, like letters to the world, typed with the clack of keys in a quiet room.
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    <audio controls>
+      <source src="example.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="blog-post">
+    <h2>Another Note</h2>
+    <p>
+      The rhythm of typing soothes me. Here’s where I’ll leave fragments of thought, like notes on a napkin tucked in a pocket.
+    </p>
+  </div>
+</body>
+</html>
