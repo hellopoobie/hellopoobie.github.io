@@ -86,6 +86,15 @@
       margin: 1rem 0;
       border: none;
       border-radius: 12px;
+
+     .post-footer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px dashed var(--border);
+        font-size: 0.9rem;
+        color: #9b6b84;
+    }
+
     }
 
     .divider {
@@ -123,27 +132,42 @@
     <p>to my fav person & the most beautiful girl ever 🌸 </p>
   </header>
 
-  <div class="blog-post">
-    <h2>welcome! :3 </h2>
-    <p>
-      hello my luvbug
-      <br>i curated this web space 4 u & i hope u like it 
-      <br>(づ๑•ᴗ•๑)づ♡
-    </p>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-    <audio controls>
-      <source src="example.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+<div class="blog-post">
+  <h2>welcome! :3 </h2>
+  <p>
+    hello my luvbug
+    <br>i curated this web space 4 u & i hope u like it 
+    <br>(づ๑•ᴗ•๑)づ♡
+  </p>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  <audio controls>
+    <source src="example.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="post-footer">
+    <p>Posted on: <span class="today-date"></span></p>
   </div>
+</div>
 
-  <div class="divider"></div>
 
-  <div class="blog-post">
-         <center> <img src="IMG_4882.JPG" width="240" height="300"></center>
-    <p>
-       this was the 1st photo or post i've made abt u. it was on 14th of Nov, few days b4 i confessed to u (i think LOL)
-    </p>
+<div class="blog-post">
+  <center><img src="IMG_4882.JPG" width="240" height="300"></center>
+  <p>
+    this was the 1st photo or post i've made abt u. it was on 14th of Nov, few days b4 i confessed to u (i think LOL)
+  </p>
+  <div class="post-footer">
+    <p>Posted on: <span class="today-date"></span></p>
   </div>
+</div>
+
+  <script>
+  const todaySpans = document.querySelectorAll('.today-date');
+  const today = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  todaySpans.forEach(span => {
+    span.textContent = today.toLocaleDateString(undefined, options);
+  });
+</script>
+
 </body>
 </html>
