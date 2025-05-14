@@ -87,22 +87,22 @@
       border: none;
       border-radius: 12px;
 
-.post-footer {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--border);
-  font-size: 0.85rem;
-  color: #b17890;
-  font-style: italic;
-  text-align: right;
-}
+    .post-footer {
+      margin-top: 1rem;
+      border-top: 1px dashed #f7b;
+      padding-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #b17890;
+      font-style: italic;
+      text-align: right;
+    }
 
-.post-footer .today-date {
-  font-size: 0.6rem;
-  font-weight: 500;
-  color: #c07a97;
-  letter-spacing: 0.3px;
-}
+    .post-footer .today-date {
+      font-size: 0.7rem !important;
+      font-weight: 500;
+      color: #c07a97;
+      letter-spacing: 0.3px;
+    }
 
     }
 
@@ -172,13 +172,13 @@
 </div>
 
   <script>
-  const todaySpans = document.querySelectorAll('.today-date');
-  const today = new Date();
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  todaySpans.forEach(span => {
-    span.textContent = today.toLocaleDateString(undefined, options);
-  });
-</script>
+    const todaySpans = document.querySelectorAll('.today-date');
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    todaySpans.forEach(span => {
+      span.textContent = today.toLocaleDateString(undefined, options);
+    });
+  </script>
 
 </body>
 </html>
