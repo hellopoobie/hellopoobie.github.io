@@ -98,13 +98,12 @@
       text-align: right;
     }
 
-    .post-footer .today-date {
+    .cute-date {
       font-size: 0.7rem !important;
       font-weight: 500;
       color: #c07a97;
       letter-spacing: 0.3px;
-    }
-
+      font-style: italic;
     }
 
     .divider {
@@ -142,42 +141,42 @@
     <p>🌷 to my fav person & the most beautiful girl ever 🌸 </p>
   </header>
 
-<div class="blog-post">
-  <h2>welcome! 🪄*｡˚⋆ </h2>
-  <p>
-    hello my luvbug (づ๑•ᴗ•๑)づ♡
-    <br>i curated this web space 4 u 
-    <br> sorry if it's too cheesy but i hope u like it :3
-
-  </p>
-  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  <audio controls>
-    <source src="example.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <div class="post-footer">
-    <p>Posted on: <span class="today-date"></span></p>
+  <div class="blog-post">
+    <h2>welcome! 🪄*｡˚⋆ </h2>
+    <p>
+      hello my luvbug (づ๑•ᴗ•๑)づ♡
+      <br>i curated this web space 4 u 
+      <br> sorry if it's too cheesy but i hope u like it :3
+    </p>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    <audio controls>
+      <source src="example.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="post-footer">
+      <p>Posted on: <span class="cute-date" data-date="2025-05-15"></span></p>
+    </div>
   </div>
-</div>
 
-
-<div class="blog-post">
-  <center><img src="IMG_4882.JPG" width="240" height="300"></center>
-  <p>
-    this was the 1st photo or post i've made abt u 💌
-    <br>it was on 14th of Nov, few days b4 i confessed to u (i think LOL)
-  </p>
-  <div class="post-footer">
-    <p>Posted on: <span class="today-date"></span></p>
+  <div class="blog-post">
+    <center><img src="IMG_4882.JPG" width="240" height="300"></center>
+    <p>
+      this was the 1st photo or post i've made abt u 💌
+      <br>it was on 14th of Nov, few days b4 i confessed to u (i think LOL)
+    </p>
+    <div class="post-footer">
+      <p>Posted on: <span class="cute-date" data-date="2024-11-14"></span></p>
+    </div>
   </div>
-</div>
 
   <script>
-    const todaySpans = document.querySelectorAll('.today-date');
-    const today = new Date();
+    const dateSpans = document.querySelectorAll('.cute-date');
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    todaySpans.forEach(span => {
-      span.textContent = today.toLocaleDateString(undefined, options);
+
+    dateSpans.forEach(span => {
+      const rawDate = span.getAttribute('data-date');
+      const formattedDate = new Date(rawDate).toLocaleDateString(undefined, options);
+      span.textContent = formattedDate;
     });
   </script>
 
